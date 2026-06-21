@@ -9,6 +9,7 @@ const Teams = () => {
   useEffect(() => {
     const fetchTeams = async () => {
       setLoading(true)
+      // Codespaces endpoint: https://<codespace-name>-8000.app.github.dev/api/teams
       try {
         const response = await fetch(`${getApiBaseUrl()}/api/teams`)
         const data = await response.json()

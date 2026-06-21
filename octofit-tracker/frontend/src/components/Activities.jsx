@@ -9,6 +9,7 @@ const Activities = () => {
   useEffect(() => {
     const fetchActivities = async () => {
       setLoading(true)
+      // Codespaces endpoint: https://<codespace-name>-8000.app.github.dev/api/activities
       try {
         const response = await fetch(`${getApiBaseUrl()}/api/activities`)
         const data = await response.json()

@@ -9,6 +9,7 @@ const Leaderboard = () => {
   useEffect(() => {
     const fetchLeaderboard = async () => {
       setLoading(true)
+      // Codespaces endpoint: https://<codespace-name>-8000.app.github.dev/api/leaderboard
       try {
         const response = await fetch(`${getApiBaseUrl()}/api/leaderboard`)
         const data = await response.json()

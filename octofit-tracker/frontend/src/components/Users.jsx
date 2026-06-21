@@ -9,6 +9,7 @@ const Users = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       setLoading(true)
+      // Codespaces endpoint: https://<codespace-name>-8000.app.github.dev/api/users
       try {
         const response = await fetch(`${getApiBaseUrl()}/api/users`)
         const data = await response.json()
